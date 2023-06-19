@@ -9,6 +9,8 @@ public interface IRPNCalculator
     List<string> SupportedOperators { get; }
 }
 
+
+
 public class RPNCalculator : IRPNCalculator, ICollection<IOperation>
 {
     private List<IOperation> _operations;
@@ -16,9 +18,11 @@ public class RPNCalculator : IRPNCalculator, ICollection<IOperation>
     public RPNCalculator()
     {
         _operations = new List<IOperation>();
+        Constants = new List<IConstant>();  
     }
 
-    
+
+
 
     public void Add(IOperation item)
     {

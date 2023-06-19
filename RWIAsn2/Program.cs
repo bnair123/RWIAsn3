@@ -12,8 +12,8 @@ public class Program
         calculator.Add(new Multiplication());
         calculator.Add(new Division());
         calculator.Add(new Logarithm());
-        calculator.Add(new Constant("pi", "pi", "Constant pi", Math.PI));
-        calculator.Add(new Constant("e", "e", "Constant e", Math.E));
+        calculator.Constants.Add(new Constant("pi", Math.PI));
+        calculator.Constants.Add(new Constant("e", Math.E));
         var parser = new Parser(calculator.SupportedOperators);
         var menu = new Menu();
         var controller = new Controller(calculator, parser, menu);
